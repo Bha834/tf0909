@@ -1,0 +1,119 @@
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: all-services-ingress
+# spec:
+#   rules:
+#   - host: localhost
+#     http:
+#       paths:
+#       - path: /service1
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: service1
+#             port:
+#               number: 5001
+#       - path: /service2
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: service2
+#             port:
+#               number: 5002
+#       - path: /service3
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: service3
+#             port:
+#               number: 5003
+#       - path: /service4
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: service4
+#             port:
+#               number: 5004
+#       - path: /service5
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: service5
+#             port:
+#               number: 5005
+#       - path: /service6
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: service6
+#             port:
+#               number: 5006
+#       - path: /service7
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: service7
+#             port:
+#               number: 5007
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: all-services-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /service1
+        pathType: Prefix
+        backend:
+          service:
+            name: service1
+            port:
+              number: 5001
+      - path: /service2
+        pathType: Prefix
+        backend:
+          service:
+            name: service2
+            port:
+              number: 5002
+      - path: /service3
+        pathType: Prefix
+        backend:
+          service:
+            name: service3
+            port:
+              number: 5003
+      - path: /service4
+        pathType: Prefix
+        backend:
+          service:
+            name: service4
+            port:
+              number: 5004
+      - path: /service5
+        pathType: Prefix
+        backend:
+          service:
+            name: service5
+            port:
+              number: 5005
+      - path: /service6
+        pathType: Prefix
+        backend:
+          service:
+            name: service6
+            port:
+              number: 5006
+      - path: /service7
+        pathType: Prefix
+        backend:
+          service:
+            name: service7
+            port:
+              number: 5007

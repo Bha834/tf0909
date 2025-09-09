@@ -1,0 +1,155 @@
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service1-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service1
+  template:
+    metadata:
+      labels:
+        app: service1
+    spec:
+      containers:
+      - name: service1
+        image: service1:latest
+        imagePullPolicy: IfNotPresent
+
+        ports:
+        - containerPort: 5001
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service2-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service2
+  template:
+    metadata:
+      labels:
+        app: service2
+    spec:
+      containers:
+      - name: service2
+        image: service2:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5002
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service3-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service3
+  template:
+    metadata:
+      labels:
+        app: service3
+    spec:
+      containers:
+      - name: service3
+        image: service3:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5003
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service4-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service4
+  template:
+    metadata:
+      labels:
+        app: service4
+    spec:
+      containers:
+      - name: service4
+        image: service4:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5004
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service5-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service5
+  template:
+    metadata:
+      labels:
+        app: service5
+    spec:
+      containers:
+      - name: service5
+        image: service5:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5005
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service6-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service6
+  template:
+    metadata:
+      labels:
+        app: service6
+    spec:
+      containers:
+      - name: service6
+        image: service6:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5006
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service7-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service7
+  template:
+    metadata:
+      labels:
+        app: service7
+    spec:
+      containers:
+      - name: service7
+        image: service7:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5007
